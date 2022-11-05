@@ -8,35 +8,54 @@
     <body>
       <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
+        <!-- another div to center elements -->
+        <div class="tablediv">
+        <!-- table to align elements to fit example images provided -->
+        <table>
+          <tr>
+            <td>Amount</td>
+            <td><input type="number" id="principal"></td>
+          </tr>
+          <tr>
+            <td>Interest Rate</td>
+            <td>
+              <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate()">
+              </td>
+              <td>
+              <span id="rate_val">10.25%</span>
+            </td>
+          </tr>
+          <tr>
+            <td>No. of Years</td>
+            <td>
+              <select  id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button onclick="compute()">Compute Interest</button>
+            </td>
+          </tr>
+        </table>
 
-        Amount <input type="number"  id="principal"> 
-        <br/>
-        
-        Rate <input type="range"  id="rate" min="1" max="20" step="0.25" value="10.25" onchange="updateRate()">
-        <span id="rate_val">10.25%</span>
-        <br/>
-        
-        No. of Years <select  id="years">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-        <br/>
-        
-        <button onclick="compute()">Compute Interest</button>
         <span id="result"></span>
-        <br>
-        
+
+        </div>
+        <!-- copyright mark and text inside the main div as in example images but with text asked in proyect guide-->
+        <footer>
+          &#169; This Calculator belongs to Geo Mil
+        </footer>
       </div>
     </body>
-    <footer>
-      &#169; This Calculator belongs to Geo Mil
-    </footer>
 </html>
