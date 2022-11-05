@@ -10,3 +10,8 @@ h1{ color: grey; font-family: verdana; }
   border-radius: 25px;
   margin: auto;
 }
+
+.tablediv {
+  width: max-content;
+  margin: auto;
+}
